@@ -1,0 +1,12 @@
+TO-DO:
+- visual representation with actual runes?
+- list planet monuments with a dropdown list
+
+
+DOING:
+- inhabiting race should be declarable from the faction itself only
+
+
+
+DONE:
+- generate a seed that corresponds to the current planet informations

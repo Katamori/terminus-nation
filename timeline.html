@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Terminus Nation Interactive Timeline</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- common files -->
+		<link rel="stylesheet" type="text/css" href="./files/common.css">		
+		<link rel="stylesheet" type="text/css" href="./files/terminus-nation/faction-colors.css">
+
+		<script src='./files/terminus-nation/timeline.js'></script>
+		<script src='./files/terminus-nation/convertdate.js'></script>
+
+		<!-- only for this one -->
+		<link rel="stylesheet" type="text/css" href="./files/terminus-nation/timeline/style.css">
+
+		<!-- Angular -->		
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Bootstrap Core JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- Plugin JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+
+	</head>
+
+	<body ng-app>
+
+		<!-- FILTERING FIELDS -->
+		<table class="filter">
+			<tr>
+
+			<!-- 	given their vague variety,
+					I generate these input fields
+					dynamically. I hope it's OK. 	-->
+				<td><a>Filter by race:</a><br><br><div id='select_race'></div></td>
+				<td><a>Filter by faction:</a><br><br><div id='select_faction'></div></td>
+				<td><a>Filter by context:</a><br><br><div id='select_context'></div></td>
+
+			</tr>
+
+			<tr>
+				<td id="select_age">
+					<a>Filter by age</a><br><br>
+
+					<a>Min: BY</a>
+						<input type="number" id="age_min" ng-model="age_min" style="width: 96px;" value="-100000000000">
+					<br>
+					<a>Max: BY</a>
+						<input type="number" id="age_max" ng-model="age_max" style="width: 96px;" value="671386">
+				</td>
+
+				<td>
+					<p>Note: filtering by date, as well as mass selection are temporarily not available.</p>
+				</td>
+
+				<td>
+					<a>(Please use BY dates here. Use </a>
+					<a href='/terminus-nation/date-calc.html'>this site</a>
+					<a> to convert any date into BY format.)</a>
+				</td>
+			</tr>
+		</table>
+
+		<br>
+		<!--<button type="button" onclick="filterAll()"style="position:absolute;">Load timeline "subset"</button>-->
+		<br><br>
+
+		<!-- THE SYSTEM ITSELF -->
+		<table id="timeline">
+			<!--
+			Oh, didn't it's also 
+			dynamically uploaded?
+			-->
+		</table>
+
+
+	</body>
+	<!-- moar files only for this one -->
+	<script src='./files/terminus-nation/timeline/create_timeline.js'></script>
+	<script src='./files/terminus-nation/timeline/create_filter.js'></script>
+
+</html>
